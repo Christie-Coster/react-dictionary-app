@@ -3,3 +3,8 @@
   text-align: center;
   font-size: small;
 }
+
+.Footer a {
+  font-weight: bold;
+  color: #77a2e2;
+}
