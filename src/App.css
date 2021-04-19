@@ -20,19 +20,3 @@
 .App h3 {
   padding-top: 30px;
 }
-.App .citySearch,
-.App .searchButton {
-  border: 3px solid rgb(133, 50, 119);
-  border-radius: 5px;
-}
-.App .searchButton {
-  color: white;
-  background: rgb(133, 50, 119);
-}
-.App .searchButton:hover {
-  color: white;
-  background: #7046aa;
-  border-color: #7046aa;
-  cursor: pointer;
-  transition: all 200ms ease-in-out;
-}

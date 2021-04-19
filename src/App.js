@@ -11,9 +11,6 @@ export default function App() {
           Dictionary 
           </strong>
         </h1>
-        <h3>
-          Enter a word that you would like to search for
-        </h3>
         <Dictionary />
       <Footer />
     </div>
