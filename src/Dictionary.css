@@ -1,0 +1,16 @@
+.Dictionary .citySearch,
+.Dictionary .searchButton {
+  border: 3px solid rgb(133, 50, 119);
+  border-radius: 5px;
+}
+.Dictionary .searchButton {
+  color: white;
+  background: rgb(133, 50, 119);
+}
+.Dictionary .searchButton:hover {
+  color: white;
+  background: #7046aa;
+  border-color: #7046aa;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
