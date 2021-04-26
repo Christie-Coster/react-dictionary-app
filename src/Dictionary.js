@@ -31,7 +31,7 @@ export default function Dictionary() {
                             id="search-input"
                             type="search"
                             className="form-control citySearch"
-                            placeholder="Search for a word..."
+                            placeholder="Search..."
                             autoComplete="off"
                             autoFocus="on"
                             onChange = {handleSubmit}
