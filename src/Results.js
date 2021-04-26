@@ -10,7 +10,7 @@ export default function Results(props) {
         <div className="Results">
             <section>
                 <div className= "row">
-                <div className="col-6">
+                <div className="col-9">
                 <h2> {props.results.word} </h2>
                 {props.results.phonetics.map(function (phonetic, index) {
                     return (
@@ -20,7 +20,7 @@ export default function Results(props) {
                     )
                 })}
                 </div>
-                <div className= "col-6">
+                <div className= "col-3">
                     <Photos photos={props.photos}/>
                 </div>
                 </div>
