@@ -1,7 +1,12 @@
 .Synonyms {
-  color: #77a2e2;
+  color: rgb(133, 50, 119);
+  margin-top: 30px;
 }
 
 li {
+  font-size: 18px;
+  font-weight: bolder;
   list-style: none;
+  display: inline-block;
+  padding-right: 12px;
 }

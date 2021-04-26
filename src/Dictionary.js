@@ -3,21 +3,30 @@ import axios from "axios";
 import "./Dictionary.css"
 import Results from "./Results";
 
-export default function Dictionary() {
-    let [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+    let [keyword, setKeyword] = useState(props.defaultKeyword);
     let [results, setResults] = useState(null);
+    let [loaded, setLoaded] = useState(false);
    function handleResponse(response) {
        setResults(response.data[0]);
    }
-    function search(event) {
-        event.preventDefault();
+    function search() {
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`
         axios.get(apiUrl).then(handleResponse);
     }
+    function showDefault(event) {
+        event.preventDefault();
+        search();
+    }
+    function load() {
+        setLoaded(true);
+        search();
+    }
     function handleSubmit(event) {
         setKeyword (event.target.value);
-
     }
+
+    if (loaded) {
     return(
         <div className="Dictionary">
             <div className="row">
@@ -25,7 +34,7 @@ export default function Dictionary() {
                     <form 
                     id="search-form" 
                     className="input-group mb-3"
-                    onSubmit={search}
+                    onSubmit={showDefault}
                     >
                         <input
                             id="search-input"
@@ -33,7 +42,6 @@ export default function Dictionary() {
                             className="form-control citySearch"
                             placeholder="Search..."
                             autoComplete="off"
-                            autoFocus="on"
                             onChange = {handleSubmit}
                         />
                         <button className="btn searchButton">
@@ -47,4 +55,8 @@ export default function Dictionary() {
             </div>
         </div>
     )
+} else {
+    load();
+    return null
+}
 }
